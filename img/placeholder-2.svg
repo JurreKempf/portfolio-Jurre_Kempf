@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 550" width="100%" height="100%">
+  <defs>
+    <pattern id="dotgrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="12" r="1.5" fill="#BA8475" opacity="0.3"/>
+    </pattern>
+  </defs>
+  <!-- Warm background -->
+  <rect width="800" height="550" fill="#f8f1ec"/>
+  <rect width="800" height="550" fill="url(#dotgrid)"/>
+
+  <!-- Editorial Framing -->
+  <rect x="25" y="25" width="750" height="500" fill="none" stroke="#1D1D1B" stroke-width="1.2" stroke-opacity="0.3"/>
+  <line x1="25" y1="60" x2="775" y2="60" stroke="#1D1D1B" stroke-width="0.8" stroke-opacity="0.2"/>
+
+  <!-- Header line in frame -->
+  <text x="40" y="48" font-family="'Courier New', monospace" font-size="11" fill="#BA8475" letter-spacing="1">
+    ARCHIEF: ONDERZOEK &amp; OBSERVATIES — FASE 01
+  </text>
+  <text x="760" y="48" font-family="'Courier New', monospace" font-size="11" fill="#1D1D1B" text-anchor="end">
+    // DISCURSIVE FIELDWORK
+  </text>
+
+  <!-- Visual graphic elements: sketches, polaroids, questions -->
+  <!-- Polaroids / Note sheets -->
+  <g transform="translate(140, 100) rotate(-4)">
+    <rect width="210" height="260" fill="#FFF7F3" stroke="#1D1D1B" stroke-width="1" filter="drop-shadow(2px 4px 6px rgba(0,0,0,0.06))"/>
+    <rect x="15" y="15" width="180" height="175" fill="#e8dfd8"/>
+    <!-- Abstract sketch lines -->
+    <path d="M 35 150 Q 80 50 120 120 T 175 90" fill="none" stroke="#1D1D1B" stroke-width="2"/>
+    <circle cx="120" cy="80" r="18" fill="#C00000" opacity="0.7"/>
+    <text x="105" y="225" font-family="sans-serif" font-size="10" fill="#1D1D1B" text-anchor="middle" font-style="italic">
+      Notitie: Waarom kiezen we afleiding?
+    </text>
+  </g>
+
+  <g transform="translate(420, 120) rotate(5)">
+    <rect width="230" height="270" fill="#FFF7F3" stroke="#1D1D1B" stroke-width="1" filter="drop-shadow(2px 4px 6px rgba(0,0,0,0.06))"/>
+    <rect x="15" y="15" width="200" height="185" fill="#dfd6cd"/>
+    <!-- Wireframe study -->
+    <rect x="35" y="35" width="160" height="145" fill="none" stroke="#BA8475" stroke-width="1.5" stroke-dasharray="4,4"/>
+    <circle cx="115" cy="105" r="40" fill="none" stroke="#1D1D1B" stroke-width="1.5"/>
+    <line x1="75" y1="105" x2="155" y2="105" stroke="#C00000" stroke-width="1.5"/>
+    <text x="115" y="235" font-family="sans-serif" font-size="10" fill="#1D1D1B" text-anchor="middle" font-style="italic">
+      Vormstudie &amp; Gedragspatronen
+    </text>
+  </g>
+
+  <!-- Discursive Star badge -->
+  <g transform="translate(380, 240)">
+    <path d="M 0 -22 C 0 -6 6 0 22 0 C 6 0 0 6 0 22 C 0 6 -6 0 -22 0 C -6 0 0 -6 0 -22 Z" fill="#C00000"/>
+  </g>
+
+  <!-- Tag -->
+  <rect x="230" y="445" width="340" height="32" fill="#1D1D1B" rx="2"/>
+  <text x="400" y="466" font-family="'Courier New', monospace" font-size="11" fill="#FFF7F3" text-anchor="middle" letter-spacing="2">
+    [FIG 02 : VELDWERK &amp; SCHETSEN]
+  </text>
+  <text x="400" y="498" font-family="sans-serif" font-size="11" fill="#7A6860" text-anchor="middle">
+    Vervang met jouw onderzoek/schetsen: img/onderzoek.jpg
+  </text>
+</svg>

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 550" width="100%" height="100%">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF7F3" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#e9dfd6" stop-opacity="0.2"/>
+    </radialGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="800" height="550" fill="#f2e8e1"/>
+  <circle cx="400" cy="240" r="220" fill="url(#glow)"/>
+
+  <!-- Technical border frame -->
+  <rect x="25" y="25" width="750" height="500" fill="none" stroke="#1D1D1B" stroke-width="1.2" stroke-opacity="0.3"/>
+
+  <!-- Process title within frame -->
+  <text x="40" y="55" font-family="'Courier New', monospace" font-size="11" fill="#BA8475" letter-spacing="2">
+    FASE 04 : VERWONDERING &amp; DIALOOG
+  </text>
+  <text x="760" y="55" font-family="'Courier New', monospace" font-size="11" fill="#C00000" text-anchor="end">
+    EXPOSITIE / DISCURSIVE OUTCOME
+  </text>
+
+  <!-- Pedestal / Showcase composition -->
+  <g transform="translate(400, 260)">
+    <!-- Pedestal shadow -->
+    <ellipse cx="0" cy="110" rx="140" ry="20" fill="#1D1D1B" opacity="0.12"/>
+    <!-- Pedestal base -->
+    <polygon points="-80,105 80,105 60,30 -60,30" fill="#BA8475" opacity="0.4"/>
+    <polygon points="-60,30 60,30 50,20 -50,20" fill="#D2B48C" opacity="0.5"/>
+    
+    <!-- Discursive Artifact on pedestal -->
+    <circle cx="0" cy="-20" r="50" fill="#1D1D1B"/>
+    <circle cx="0" cy="-20" r="42" fill="#C00000"/>
+    <circle cx="-12" cy="-30" r="14" fill="#FFF7F3"/>
+    
+    <!-- Sparkle star radiating from artifact -->
+    <path d="M 0 -90 C 0 -60 10 -50 35 -50 C 10 -50 0 -40 0 -10 C 0 -40 -10 -50 -35 -50 C -10 -50 0 -60 0 -90 Z" fill="#D2B48C"/>
+  </g>
+
+  <!-- Label Badge -->
+  <rect x="230" y="445" width="340" height="32" fill="#1D1D1B" rx="2"/>
+  <text x="400" y="466" font-family="'Courier New', monospace" font-size="11" fill="#FFF7F3" text-anchor="middle" letter-spacing="2">
+    [FIG 04 : EINDCONCEPT &amp; REFLECTIE]
+  </text>
+  <text x="400" y="498" font-family="sans-serif" font-size="11" fill="#7A6860" text-anchor="middle">
+    Vervang met jouw eindresultaat: img/eindresultaat.jpg
+  </text>
+</svg>

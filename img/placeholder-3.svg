@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 550" width="100%" height="100%">
+  <defs>
+    <linearGradient id="terragrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#BA8475"/>
+      <stop offset="100%" stop-color="#D2B48C"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="800" height="550" fill="#f5ede7"/>
+
+  <!-- Technical border frame -->
+  <rect x="25" y="25" width="750" height="500" fill="none" stroke="#1D1D1B" stroke-width="1.2" stroke-opacity="0.3"/>
+  
+  <!-- Corner crosses -->
+  <path d="M 18 25 H 32 M 25 18 V 32 M 768 25 H 782 M 775 18 V 32 M 18 525 H 32 M 25 518 V 532 M 768 525 H 782 M 775 518 V 532" stroke="#1D1D1B" stroke-width="1.2"/>
+
+  <!-- Process title within frame -->
+  <text x="40" y="55" font-family="'Courier New', monospace" font-size="11" fill="#C00000" letter-spacing="2">
+    FASE 03 : TASTBAARHEID &amp; MATERIAALONDERZOEK
+  </text>
+  <text x="760" y="55" font-family="'Courier New', monospace" font-size="11" fill="#BA8475" text-anchor="end">
+    PROTOTYPE V1.4
+  </text>
+
+  <!-- Abstract tactile / sculpture shapes -->
+  <g transform="translate(180, 240)">
+    <!-- Shape 1 -->
+    <path d="M 0 60 C 20 -40, 120 -60, 160 20 C 190 70, 140 130, 40 110 Z" fill="url(#terragrad)"/>
+    <path d="M 40 40 C 60 -10, 130 -10, 140 40 C 150 80, 100 90, 50 80 Z" fill="#1D1D1B" opacity="0.12"/>
+  </g>
+
+  <g transform="translate(450, 200)">
+    <!-- Shape 2: Geometrical contrast -->
+    <polygon points="40,20 190,40 160,170 10,130" fill="#D2B48C" opacity="0.8"/>
+    <polygon points="30,10 180,30 150,160 0,120" fill="none" stroke="#1D1D1B" stroke-width="1.5"/>
+    <circle cx="95" cy="85" r="35" fill="#C00000" opacity="0.85"/>
+  </g>
+
+  <!-- Star element -->
+  <path d="M 400 120 C 400 135 405 135 418 135 C 405 135 400 135 400 150 C 400 135 395 135 382 135 C 395 135 400 135 400 120 Z" fill="#1D1D1B"/>
+
+  <!-- Label Badge -->
+  <rect x="230" y="445" width="340" height="32" fill="#1D1D1B" rx="2"/>
+  <text x="400" y="466" font-family="'Courier New', monospace" font-size="11" fill="#FFF7F3" text-anchor="middle" letter-spacing="2">
+    [FIG 03 : VORM- &amp; MATERIAALSTUDIE]
+  </text>
+  <text x="400" y="498" font-family="sans-serif" font-size="11" fill="#7A6860" text-anchor="middle">
+    Vervang met jouw prototypefoto: img/materiaal.jpg
+  </text>
+</svg>
