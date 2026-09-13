@@ -386,9 +386,9 @@ p.lead {
 }
 
 .btn-primary {
-  background-color: var(--ink);
+  background-color: var(--clay);
   color: var(--bg);
-  border-color: var(--ink);
+  border-color: var(--clay);
 }
 
 .btn-primary:hover {
@@ -458,10 +458,75 @@ p.lead {
 }
 
 /* --- Projects Grid (Home) --- */
-.projects-grid {
+/* --- Projects Carousel --- */
+
+.projects-carousel {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-template-columns: 52px minmax(0, 1fr) 52px;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.projects-window {
+  overflow: hidden;
+  width: 100%;
+}
+
+.projects-grid {
+  display: flex;
   gap: 2.5rem;
+  transition: transform 0.45s ease;
+  will-change: transform;
+}
+
+.projects-grid .project-card {
+  flex: 0 0 calc((100% - 5rem) / 3);
+  min-width: 0;
+}
+
+
+/* --- Carousel pijlen --- */
+
+.carousel-arrow {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  border: 1px solid var(--border-strong);
+
+  background-color: var(--bg);
+  color: var(--ink);
+
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  line-height: 1;
+
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.carousel-arrow:hover {
+  background-color: var(--red);
+  border-color: var(--red);
+  color: #FFFFFF;
+  transform: scale(1.05);
+}
+
+.carousel-arrow:disabled {
+  opacity: 0.3;
+  cursor: default;
+  transform: none;
+}
+
+.carousel-arrow:disabled:hover {
+  background-color: var(--bg);
+  border-color: var(--border-strong);
+  color: var(--ink);
 }
 
 .project-card {
@@ -558,8 +623,7 @@ p.lead {
 
 /* --- Discursive Quote Box --- */
 .quote-banner {
-  background-color: var(--ink);
-  color: var(--bg);
+  color: var(--red-hover);
   padding: 4rem 3rem;
   border-radius: var(--radius-sm);
   position: relative;
@@ -592,7 +656,7 @@ p.lead {
   font-size: 0.82rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--sand);
+  color: var(--red-hover);
 }
 
 /* --- Redactionele Fotokader / Figure --- */
@@ -1037,6 +1101,20 @@ p.lead {
   .hero {
     padding: 3.5rem 0 2.5rem;
   }
+  @media (max-width: 900px) {
+  .projects-grid .project-card {
+    flex: 0 0 calc((100% - 2.5rem) / 2);
+  }
+
+  .projects-carousel {
+    grid-template-columns: 46px minmax(0, 1fr) 46px;
+  }
+
+  .carousel-arrow {
+    width: 44px;
+    height: 44px;
+  }
+}
 }
 
 @media (max-width: 768px) {
@@ -1073,10 +1151,24 @@ p.lead {
   .nav-link {
     font-size: 1.2rem;
   }
+.projects-carousel {
+  grid-template-columns: 42px minmax(0, 1fr) 42px;
+  gap: 0.6rem;
+}
 
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
+.projects-grid {
+  gap: 1.5rem;
+}
+
+.projects-grid .project-card {
+  flex: 0 0 100%;
+}
+
+.carousel-arrow {
+  width: 40px;
+  height: 40px;
+  font-size: 1rem;
+}
 
     .hero-layout {
     grid-template-columns: 1fr;

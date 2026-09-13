@@ -118,4 +118,80 @@ function initEmailCopy() {
       });
     });
   });
+
+  /* =========================================================
+   PROJECT CAROUSEL
+   ========================================================= */
+
+const carousel = document.querySelector('.projects-carousel');
+
+if (carousel) {
+  const track = carousel.querySelector('.projects-grid');
+  const cards = carousel.querySelectorAll('.project-card');
+  const prevButton = carousel.querySelector('.carousel-prev');
+  const nextButton = carousel.querySelector('.carousel-next');
+
+  let currentIndex = 0;
+
+
+  function getVisibleCards() {
+    if (window.innerWidth <= 768) {
+      return 1;
+    }
+
+    if (window.innerWidth <= 900) {
+      return 2;
+    }
+
+    return 3;
+  }
+
+
+  function updateCarousel() {
+    const visibleCards = getVisibleCards();
+    const maxIndex = Math.max(0, cards.length - visibleCards);
+
+    // Zorg dat de index niet buiten de beschikbare cards valt
+    currentIndex = Math.min(currentIndex, maxIndex);
+
+    if (cards.length === 0) {
+      return;
+    }
+
+    const cardWidth = cards[0].offsetWidth;
+    const gap = parseFloat(getComputedStyle(track).gap);
+
+    const offset = currentIndex * (cardWidth + gap);
+
+    track.style.transform = `translateX(-${offset}px)`;
+
+    // Pijlen in-/uitschakelen
+    prevButton.disabled = currentIndex === 0;
+    nextButton.disabled = currentIndex >= maxIndex;
+  }
+
+
+  nextButton.addEventListener('click', () => {
+    const visibleCards = getVisibleCards();
+    const maxIndex = Math.max(0, cards.length - visibleCards);
+
+    if (currentIndex < maxIndex) {
+      currentIndex++;
+      updateCarousel();
+    }
+  });
+
+
+  prevButton.addEventListener('click', () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateCarousel();
+    }
+  });
+
+
+  window.addEventListener('resize', updateCarousel);
+
+  updateCarousel();
+}
 }
