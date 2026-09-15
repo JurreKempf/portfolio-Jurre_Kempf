@@ -729,72 +729,148 @@ p.lead {
   color: var(--red);
 }
 
+
+@media (min-width: 901px) {
+  .page-over-mij .bio-layout {
+    display: grid !important;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 3.5rem;
+    align-items: stretch !important; /* Dwingt beide kolommen tot gelijke hoogte */
+  }
+
+  .page-over-mij .bio-main-text {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .page-over-mij .bio-sidebar {
+    display: flex !important;
+    flex-direction: column !important;
+    height: auto !important; /* Voorkomt dat sticky/height roet in het eten gooit */
+  }
+
+  .page-over-mij .bio-main-text .sidebar-box,
+  .page-over-mij .bio-sidebar .sidebar-box {
+    margin-top: auto !important; /* Duwt beide boxen exact naar de bodem */
+  }
+}
 /* --- Pagina: Over Mij --- */
 .bio-layout {
+
   display: grid;
+
   grid-template-columns: 1.15fr 0.85fr;
+
   gap: 3.5rem;
-  align-items: stretch;
+
+  align-items: start;
+
 }
+
+
 
 .bio-main-text {
+
   font-size: 1.12rem;
+
   line-height: 1.78;
-  display: flex;
-  flex-direction: column;
-  margin-top: auto;
+
 }
+
+
 
 .bio-main-text p {
+
   margin-bottom: 1.6rem;
+
 }
+
+
 
 .bio-sidebar {
+
   position: sticky;
+
   top: 6rem;
-  display: flex;
-  flex-direction: column;
+
 }
+
+
 
 .sidebar-box {
+
   background-color: var(--bg-card);
+
   border: 1px solid var(--border);
+
   padding: 1.8rem;
+
   border-radius: var(--radius-sm);
+
   margin-top: 1.8rem;
-    margin-top: auto;
 
 }
+
+
 
 .sidebar-box h4 {
+
   font-size: 1.15rem;
+
   margin-bottom: 1rem;
+
   display: flex;
+
   align-items: center;
+
   gap: 0.5rem;
+
 }
+
+
 
 .sidebar-list {
+
   list-style: none;
+
 }
+
+
 
 .sidebar-list li {
+
   font-size: 0.95rem;
+
   padding: 0.45rem 0;
+
   border-bottom: 1px solid var(--border);
+
   display: flex;
+
   justify-content: space-between;
+
 }
+
+
 
 .sidebar-list li:last-child {
+
   border-bottom: none;
+
 }
 
+
+
 .sidebar-list .label {
+
   font-family: var(--font-mono);
+
   font-size: 0.75rem;
+
   text-transform: uppercase;
+
   color: var(--ink-light);
+
 }
 
 /* Discursive Design Vragen Blok */
